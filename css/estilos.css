@@ -1,3 +1,15 @@
-h1 {
-    text-align: center;
-  }
+.card-header {
+  text-align: left;
+  font-weight: bold;
+  color: black;
+
+}
+
+/* Este color de las letras del label */
+label{
+  color: black;
+}
+/* Este color de fondo */
+.card {
+  background-color: lightgray;
+}

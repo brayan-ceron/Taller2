@@ -5,75 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Sistema de Empleados</title> 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
     <link rel="stylesheet" href="css/mdb.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-
+    <link rel="stylesheet" href="css/estilos.css">
     <script src="js/Funciones.js"></script>
-    <style>
-    </style> 
-    </head>
-    <body align="center">
-      <h1>Sistema de empleados</h1>
-      <div class="card border border-primary shadow-0 mb-12" style="max-width: 80rem;">
-       <div class="card-header">Datos Personales</div>
-       <div class="card-body text-primary" >
-        <div class="row">
-          <div class="col-md-6">
-            <div class="pb-3" >
-              <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre"><br><br>
-            
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido"><br><br>
-            
-                <label for="fecha">Fecha de nacimiento:</label>
-                <input type="date" id="fecha" name="fecha"><br><br>
-
-                <label for="fecha">Fecha de ingreso:</label>
-                <input type="date" id="fecha" name="fecha"><br><br>
-            </div>
-          </div>
-          <div class="col-md-6">
-          <img src="img/Imagen.png" alt="Producto1" width="400" height="400">
-          </div>
-          <div class="card-header">Salario </div>
-          <div class="col-12" align="center">          
-            <h2>Salario</h2>
-            <input type="text" id="campo-texto" name="campo-texto">
-            <button type="button" class="btn btn-primary" >Modificar</button>      
-            </div>
-          
-            <div class="card-header">Calculos </div>
-            <div align="center"> 
-            <div class="container">
-              <button type="button">Calcular Edad </button>
-              <input type="text" id="campo1" name="campo1">   
-            </div>
-        
-            <div class="container">
-              <button type="button">Calcular Antiguedad  </button>
-              <input type="text" id="campo2" name="campo2">
-            </div>
-          
-            <div class="container">
-              <button type="button">Calcular prestaciones</button>
-              <input type="text" id="campo3" name="campo3">
-            </div>
-            </div>
-            <div class="card-header">Puntos de extención </div>
-            
-            <div class="col-12" align="center">
-              <button class="btn btn-success">Opcion 1</button>
-              <button class="btn btn-success">Opcion 2</button>
-            </div>
-
-     </div>
-    </div>
     <script type="text/javascript" src="js/mdb.min.js"></script>
-    <script type="text/javascript"></script>
+    </head>
+      <body>
+        <div class="container" align="center">
+        <h1>Sistema de empleados</h1>   
+        <div class="card border border-primary shadow-0 mb-12" style="max-width: 40rem;">
+          <div class="card-body text-primary" >
+            <div class="card-header">Datos Personales</div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="pb-3" >
+                  <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre"><br><br>
+                
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" name="apellido"><br><br>
+
+                    <label for="sexo">Sexo:</label><br>
+                    <label for="sexo-masculino">Masculino</label>
+                    <input type="radio" id="sexo-masculino" name="sexo" value="masculino">
+                    <label for="sexo-femenino">Femenino</label>
+                    <input type="radio" id="sexo-femenino" name="sexo" value="femenino">
+                    <label for="sexo-otro">Otro</label>
+                    <input type="radio" id="sexo-otro" name="sexo" value="otro"><br><br>
+                
+                    <label for="fecha">Fecha de nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br><br>
+
+                    <label for="fecha">Fecha de ingreso:</label><br>
+                    <input type="date" id="fechaIngreso" name="fechaIngreso"><br><br>
+                </div>
+              </div>
+              <div class="col-md-6">
+              <img src="img/Imagen.png" alt="Producto1" width="300" height="300">
+              </div>
+              <div class="card-header">Salario </div>
+              <div class="col-12">  
+                <label for="salario">Salario:</label>
+                <input type="text" id="salario" name="salario">
+                <button class="btn btn-outline-dark" onclick="modificarSalario(event)">Modificar</button>      
+              </div>             
+                <div class="card-header">Calculos </div>
+                <div align="center"> 
+                  <div class="container">
+                    <button class="btn btn-outline-dark" onclick="calcularEdad(event)">Calcular Edad</button>
+                    <input type="text" id="campo1" name="campo1">   
+                  </div>
+            
+                <div class="container">
+                  <button class="btn btn-outline-dark" onclick="calcularAntiguedad(event)">Calcular Antiguedad  </button>
+                  <input type="text" id="campo2" name="campo2">
+                </div>
+              
+                <div class="container">
+                 <button class="btn btn-outline-dark" onclick="calcularPrestaciones(event)">Calcular prestaciones</button>
+                  <input type="text" id="campo3" name="campo3">
+                </div>
+                </div>
+                <div class="card-header">Puntos de extención </div>
+                
+                <div class="col-12" align="center">
+                  <button class="btn btn-outline-dark" onclick="informacion()">Opcion 1</button>
+                  <button class="btn btn-outline-dark"  onclick="opcion()">Opcion 2</button>
+                </div>
+        </div>
+      </div>
+      </div>
   </body>
 </html>
